@@ -1,0 +1,436 @@
+/* =========================
+   VARIABLES CSS
+========================= */
+
+:root{
+
+--color-bg: #f5f7fb;
+--color-primary: #4f46e5;
+--color-secondary: #6366f1;
+--color-border: #e5e7eb;
+--color-text: #1f2937;
+--color-white: #ffffff;
+
+--font-main: system-ui, Arial, sans-serif;
+
+--spacing-xs: 4px;
+--spacing-sm: 8px;
+--spacing-md: 16px;
+--spacing-lg: 24px;
+--spacing-xl: 40px;
+
+--radius: 8px;
+
+--shadow-card: 0 4px 12px rgba(0,0,0,0.08);
+
+}
+
+
+/* =========================
+   RESET CSS
+========================= */
+
+*,
+*::before,
+*::after{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:var(--font-main);
+background:var(--color-bg);
+color:var(--color-text);
+line-height:1.5;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+button,
+input,
+textarea{
+font-family:inherit;
+}
+
+
+/* =========================
+   CABECERA
+========================= */
+
+header{
+
+background:var(--color-primary);
+color:var(--color-white);
+
+padding:var(--spacing-lg);
+
+text-align:center;
+
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+
+}
+
+header h1{
+font-size:1.8rem;
+}
+
+
+/* =========================
+   LAYOUT PRINCIPAL
+========================= */
+
+main{
+
+display:flex;
+
+gap:var(--spacing-lg);
+
+padding:var(--spacing-lg);
+
+align-items:flex-start;
+
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+section{
+
+flex:1;
+
+background:var(--color-white);
+
+padding:var(--spacing-lg);
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow-card);
+
+margin-bottom:var(--spacing-lg);
+
+}
+
+
+/* =========================
+   PANEL LATERAL
+========================= */
+
+aside{
+
+width:260px;
+
+background:var(--color-white);
+
+padding:var(--spacing-lg);
+
+border-radius:var(--radius);
+
+box-shadow:var(--shadow-card);
+
+height:fit-content;
+
+}
+
+aside h2{
+margin-bottom:var(--spacing-md);
+}
+
+aside ul{
+list-style:none;
+}
+
+aside li{
+margin-bottom:var(--spacing-sm);
+}
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+form{
+
+display:flex;
+
+flex-direction:column;
+
+gap:var(--spacing-md);
+
+margin-top:var(--spacing-md);
+
+}
+
+label{
+font-weight:600;
+}
+
+input,
+textarea{
+
+padding:12px;
+
+font-size:16px;
+
+border:1px solid var(--color-border);
+
+border-radius:var(--radius);
+
+transition:0.2s;
+
+}
+
+
+/* FOCUS INPUT */
+
+input:focus,
+textarea:focus{
+
+outline:none;
+
+border-color:var(--color-primary);
+
+box-shadow:0 0 0 2px rgba(79,70,229,0.2);
+
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+button{
+
+background:var(--color-primary);
+
+color:white;
+
+border:none;
+
+padding:12px;
+
+border-radius:var(--radius);
+
+cursor:pointer;
+
+font-weight:600;
+
+transition:0.2s;
+
+}
+
+
+/* HOVER BOTON */
+
+button:hover{
+
+background:var(--color-secondary);
+
+}
+
+
+/* FOCUS BOTON */
+
+button:focus{
+
+outline:none;
+
+box-shadow:0 0 0 3px rgba(79,70,229,0.3);
+
+}
+
+
+/* =========================
+   LISTA DE TAREAS
+========================= */
+
+#taskList{
+
+list-style:none;
+
+margin-top:var(--spacing-md);
+
+display:flex;
+
+flex-direction:column;
+
+gap:var(--spacing-md);
+
+}
+
+
+/* =========================
+   TARJETA DE TAREA
+========================= */
+
+.task{
+
+border:1px solid var(--color-border);
+
+padding:var(--spacing-md);
+
+border-radius:var(--radius);
+
+background:var(--color-white);
+
+box-shadow:var(--shadow-card);
+
+}
+
+.task-title{
+font-size:1.1rem;
+margin-bottom:var(--spacing-sm);
+}
+
+.task-description{
+font-size:0.95rem;
+margin-bottom:var(--spacing-md);
+color:#4b5563;
+}
+
+.task-actions{
+
+display:flex;
+
+gap:var(--spacing-sm);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+text-align:center;
+
+padding:var(--spacing-lg);
+
+margin-top:var(--spacing-lg);
+
+color:#6b7280;
+
+font-size:0.9rem;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width:900px){
+
+main{
+
+flex-direction:column;
+
+}
+
+aside{
+
+width:100%;
+
+}
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px){
+
+main{
+
+flex-direction:column;
+
+}
+
+/* panel debajo */
+
+aside{
+
+width:100%;
+
+order:2;
+
+}
+
+section{
+
+order:1;
+
+}
+
+}
+
+
+/* =========================
+   MOVIL
+========================= */
+
+@media (max-width:600px){
+
+header h1{
+
+font-size:1.5rem;
+
+}
+
+/* padding más compacto */
+
+main{
+
+padding:var(--spacing-md);
+
+gap:var(--spacing-md);
+
+}
+
+/* formulario adaptable */
+
+form{
+
+gap:var(--spacing-sm);
+
+}
+
+input,
+textarea{
+
+width:100%;
+
+font-size:16px;
+
+}
+
+/* botones ancho completo */
+
+button{
+
+width:100%;
+
+}
+
+/* tarjetas más compactas */
+
+.task{
+
+padding:var(--spacing-sm);
+
+}
+
+.task-actions{
+
+flex-direction:column;
+
+}
+
+}
