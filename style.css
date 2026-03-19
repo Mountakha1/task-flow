@@ -116,6 +116,32 @@ margin-bottom:var(--spacing-lg);
 
 }
 
+/* =========================
+   TOOLBAR LISTA
+========================= */
+
+.task-toolbar{
+display:flex;
+gap:var(--spacing-sm);
+margin-top:var(--spacing-md);
+}
+
+.task-toolbar input[type="search"]{
+flex:1;
+}
+
+.visually-hidden{
+position:absolute;
+width:1px;
+height:1px;
+padding:0;
+margin:-1px;
+overflow:hidden;
+clip:rect(0,0,0,0);
+white-space:nowrap;
+border:0;
+}
+
 
 /* =========================
    PANEL LATERAL
